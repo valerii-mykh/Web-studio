@@ -71,6 +71,11 @@ img {
     max-width: 448px;
   }
 }
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+}
 
 .title {
   font-weight: 700;
@@ -377,11 +382,12 @@ img {
 }
 
 .benefits {
-  padding-top: 94px;
+  padding-top: 60px;
 }
-.benefits__list {
+.benefits__list .list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 .benefits__title {
   font-weight: 700;
@@ -400,10 +406,7 @@ img {
 }
 
 .benefits__item {
-  min-width: 270px;
-}
-.benefits__item:not(:last-child) {
-  margin-right: 30px;
+  width: 100%;
 }
 
 .soc__link {

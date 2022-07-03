@@ -1,9 +1,11 @@
 
 .benefits {
-    padding-top: 94px;
-    &__list {
+    // padding-top: 94px;
+    padding-top: 60px;
+    &__list .list{
         display: flex;
         flex-wrap: wrap;
+       gap: 30px;
     }
     &__title {
         font-weight: 700;
@@ -23,10 +25,7 @@
     }
 }
 .benefits__item {
-    min-width: 270px;
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
+   width: 100%;
 }
 .soc__link {
     display: flex;
