@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -928,8 +929,14 @@ img {
 }
 .footer__wrap {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
+}
+@media screen and (min-width: 768зч) {
+  .footer__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 .footer__logo {
   display: inline-block;
