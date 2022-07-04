@@ -289,6 +289,15 @@ img {
   margin-right: 10px;
 }
 
+.nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+}
+
 .nav__list {
   display: flex;
 }
@@ -308,10 +317,16 @@ img {
   }
 }
 .contacts {
+  display: none;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: end;
   margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -320,6 +335,7 @@ img {
   }
 
   .contacts {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -337,6 +353,7 @@ img {
 @media screen and (min-width: 1200px) {
   .nav__link {
     padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 .nav__link::after {
@@ -390,6 +407,128 @@ img {
 .nav__mail:focus,
 .nav__tel:focus {
   color: #2196F3;
+}
+
+.menu-open-btn,
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  background-color: #fff;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .menu-open-btn,
+.menu-close-btn {
+    display: none;
+  }
+}
+
+.menu-open-btn:hover,
+.menu-close-btn:hover {
+  fill: #2196F3;
+}
+
+.menu-close-btn {
+  margin-bottom: 9px;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  width: 100vw;
+  height: 102vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.mob-container {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.mob-menu__list {
+  margin-bottom: 40px;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mob-menu__link:hover {
+  color: #2196F3;
+}
+
+.mob-current {
+  color: #2196F3;
+}
+
+.mob-contacts__list {
+  margin-bottom: 62px;
+}
+
+.mob-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-contacts__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mob-contacts__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.mob-connect__list {
+  display: flex;
+}
+
+.mob-connect__item:not(:last-child) {
+  margin-right: 20px;
+  position: relative;
+}
+.mob-connect__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 0px;
+  bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+.mob-connect__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+  position: relative;
 }
 
 .hero {
@@ -769,16 +908,28 @@ img {
   margin-bottom: 60px;
 }
 .footer__container {
+  display: flex;
   flex-direction: column;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__container {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: row;
   }
+}
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .footer__logo {
   display: inline-block;
@@ -807,6 +958,11 @@ img {
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .footer__title {
+    text-align: left;
+  }
+}
 .footer__soc-list {
   display: flex;
   justify-content: center;
@@ -818,6 +974,12 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer .footer__right form {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer .footer__right {
@@ -869,6 +1031,11 @@ address {
   padding: 15px;
   background-color: transparent;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .input {
+    width: 80%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .input {
