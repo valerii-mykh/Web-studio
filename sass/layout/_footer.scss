@@ -2,9 +2,7 @@
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  &__list {
-    margin-bottom: 60px;
-  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -23,10 +21,17 @@
   &__wrap {
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 768зч) {
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-direction: row;
+    }
+    .footer__left {
+      margin-bottom: 60px;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
     }
   }
   &__logo {
@@ -42,7 +47,6 @@
     color: rgba(255, 255, 255, 0.6);
   }
   &__center {
-    margin-bottom: 60px;
     @media screen and (min-width: 1200px) {
       margin-left: 70px;
     }
