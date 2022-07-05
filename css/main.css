@@ -302,18 +302,14 @@ img {
   display: flex;
 }
 
-@media screen and (min-width: 768px) {
-  .header__menu .nav__item:not(:last-child) {
-    margin-right: 50px;
-  }
-
-  .nav__mail {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts .nav__item:not(:last-child) {
     margin-bottom: 10px;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .nav__mail {
-    margin-bottom: 0;
+@media screen and (min-width: 768px) {
+  .header__menu .nav__item:not(:last-child) {
+    margin-right: 50px;
   }
 }
 .contacts {
@@ -666,10 +662,11 @@ img {
   }
 }
 
-.benefits__item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .benefits__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
-
 .soc__link {
   display: flex;
   align-items: center;
@@ -1088,10 +1085,12 @@ address {
   flex-wrap: wrap;
   margin-bottom: 50px;
   border-radius: 4px;
+  margin-top: -15px;
 }
 @media screen and (min-width: 768px) {
   .portfolio__list-button {
     justify-content: center;
+    margin-top: 0px;
   }
 }
 
